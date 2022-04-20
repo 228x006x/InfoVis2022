@@ -1,4 +1,4 @@
-x,y,W,H,color
+x,y,width,height,color
 20,20,10,10,"Red"
 100,50,10,10,"Blue"
 70,80,10,10,"Green"
