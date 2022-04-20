@@ -12,10 +12,10 @@
             .data(data)
             .enter()
             .append("rect")
-            .attr("x", function(d){ return d.x; })
-            .attr("y", function(d){ return d.y; })
-            .attr("width", function(d){ return d.width; })
-            .attr("height", function(d){ return d.height; })
+            .attr("rx", function(d){ return d.x; })
+            .attr("ry", function(d){ return d.y; })
+            .attr("W", function(d){ return d.W; })
+            .attr("H", function(d){ return d.H; })
             .style("fill", function(d){ return d.color; });
         };
     </script>
