@@ -1,4 +1,4 @@
 TagName,x,y,width,height,color
-"Label1",70,10,100,10,"Red"
-"Label2",70,40,50,10,"Blue"
-"Label3",70,70,80,10,"Green"
+"Label1",100,10,100,10,"Red"
+"Label2",100,50,50,10,"Blue"
+"Label3",100,90,80,10,"Green"
