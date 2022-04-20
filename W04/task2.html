@@ -13,7 +13,7 @@
         svg.selectAll("rect").data(data).enter().append("text")
             .attr("x",0)
             .attr("y",function(d){ return d.y*1.2;})
-            .attr("dy","10px")
+            .attr("dy","5px")
             .text(function(d){ return d.TagName;})
     };
 
