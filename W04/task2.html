@@ -12,8 +12,8 @@
             .data(data)
             .enter()
             .append("rect")
-            .attr("rx", function(d){ return d.x; })
-            .attr("ry", function(d){ return d.y; })
+            .attr("x", function(d){ return d.x; })
+            .attr("y", function(d){ return d.y; })
             .attr("width", function(d){ return d.width; })
             .attr("height", function(d){ return d.height; })
             .style("fill", function(d){ return d.color; });
