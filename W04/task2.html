@@ -12,7 +12,7 @@
     function tex(data){
         svg.selectAll("rect").data(data).enter().append("text")
             .attr("x",0)
-            .attr("y",function(d){ return d.y*1.2;})
+            .attr("y",function(d){ return d.y;})
             
             .text(function(d){ return d.TagName;})
     };
