@@ -6,7 +6,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/W06/w06_task1_index.html")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: {top:10, right:10, bottom:20, left:10}
+            margin: {top:20, right:20, bottom:20, left:20}
         };
 
         const scatter_plot = new ScatterPlot( config, data );
@@ -23,7 +23,7 @@ class ScatterPlot {
             parent: config.parent,
             width: config.width || 256,
             height: config.height || 256,
-            margin: config.margin || {top:10, right:10, bottom:10, left:10}
+            margin: config.margin || {top:20, right:20, bottom:20, left:20}
         }
         this.data = data;
         this.init();
@@ -55,7 +55,7 @@ class ScatterPlot {
             .ticks(6);
 
         self.xaxis_group = self.chart.append('g')
-            .attr('transform', `translate(0, ${self.inner_height})`);
+            .attr('transform', `translate(0, ${self.inner_height})`)
         
         self.yaxis_group = self.chart.append('g')
             .attr('transform', `translate(0, ${self.inner_width})`);
