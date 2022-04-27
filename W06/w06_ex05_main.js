@@ -1,4 +1,4 @@
-d3.csv("https://228x006x.github.io/InfoVis2022/W06/data.csv")
+d3.csv("https://vizlab-kobe-lecture.github.io/InfoVis2022/W06/data.csv")
     .then( data => {
         data.forEach( d => { d.x = +d.x; d.y = +d.y; });
 
