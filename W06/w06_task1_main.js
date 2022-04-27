@@ -1,4 +1,4 @@
-d3.csv("https://228x006x.github.io/InfoVis2022/W06/data.csv")
+d3.csv("https://228x006x.github.io/InfoVis2022/W06/w06_task1_index.html")
     .then( data => {
         data.forEach( d => { d.x = +d.x; d.y = +d.y; });
 
@@ -90,5 +90,8 @@ class ScatterPlot {
 
         self.xaxis_group
             .call( self.xaxis );
+
+        self.yaxis_group
+            .call( self.yaxis );
     }
 }
