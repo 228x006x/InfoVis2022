@@ -6,7 +6,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/W06/data.csv")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: {top:20, right:10, bottom:40, left:50}
+            margin: {top:20, right:10, bottom:50, left:60}
         };
 
         const scatter_plot = new ScatterPlot( config, data );
@@ -60,7 +60,31 @@ class ScatterPlot {
         self.yaxis_group = self.chart.append('g')
             .attr('transform', `translate( ${self.inner_width}), 0`);
         
+        self.title = self.chart.append('g')
+            .append("text")
+            .attr("x", (self.config.width - self.config.margin.left - self.config.margin.right)/2)
+            .attr("y", 0)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "15pt")
+            .text("Graph")
         
+        self.xlabel = self.chart.append('g')
+            .append("text")
+            .attr("x", (self.config.width - self.config.margin.left - self.config.margin.right)/2)
+            .attr("y", self.config.height - self.config.margin.top)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "10pt")
+            .text("x-axis");
+
+        self.ylabel = self.chart.append('g')
+            .attr("transform", "translate("+self.config.margin.left+","+0+")")
+            .append("text")
+            .attr("x", -(self.config.height - self.config.margin.top - self.config.margin.bottom)/2)
+            .attr("y", -90)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "10pt")
+            .attr("transform", "rotate(-90)")
+            .text("y-axis");
     }
 
     update() {
