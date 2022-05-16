@@ -5,7 +5,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/W08/data2.csv")
         var config = {
             parent: '#drawing_region',
             width: 256,
-            height: 128,
+            height: 256,
             margin: {top:25, right:10, bottom:50, left:50},
             title: 'BarChart',
             xlabel: 'X label',
@@ -26,7 +26,10 @@ class BarChart {
             parent: config.parent,
             width: config.width || 256,
             height: config.height || 128,
-            margin: config.margin || {top:10, right:10, bottom:10, left:10}
+            margin: config.margin || {top:10, right:10, bottom:10, left:10},
+            title: config.title || '',
+            xlabel: config.xlabel || '',
+            ylabel: config.ylabel || ''
         }
         this.data = data;
         this.init();
@@ -52,17 +55,21 @@ class BarChart {
             .range( [ 0, self.inner_height] );
     
         self.xaxis = d3.axisBottom( self.xscale )
-            .ticks(6);
+            .ticks(3)
+            .tickSize(5)
+            .tickPadding(5);
     
         self.yaxis = d3.axisLeft( self.yscale )
-            .ticks(6);
+            .ticks(3)
+            .tickSize(5)
+            .tickPadding(5);
     
         self.xaxis_group = self.chart.append('g')
-            .attr('transform', `translate(0, ${self.inner_height})`)
-            .call( xaxis);
+            .attr('transform', `translate(0, ${self.inner_height})`);
+            
 
-        self.yaxis_group = self.chart.append('g')
-            .call( yaxis);
+        self.yaxis_group = self.chart.append('g');
+           
         
         const title_space = 10;
         self.svg.append('text')
@@ -91,7 +98,8 @@ class BarChart {
     
     update() {
         let self = this;
-    
+
+        const space = 10;
         const xmin = d3.min( self.data, d => d.value );
         const xmax = d3.max( self.data, d => d.value );
         self.xscale.domain( [xmin, xmax] );
@@ -110,10 +118,16 @@ class BarChart {
             .data(self.data)
             .enter()
             .append("rect")
-            .attr("x", d => self.xscale( d.value ) )
+            .attr("x", 0)
             .attr("y", d => self.yscale( d.label ) )
             .attr("width", d => self.xscale( d.value) )
             .attr("height", yscale.bandwidth());
+
+        self.xaxis_group
+            .call( self.xaxis );
+
+        self.yaxis_group
+            .call( self.yaxis );
     
         
     }
