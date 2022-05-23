@@ -6,7 +6,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/W10/data2.csv")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: {top:10, right:10, bottom:20, left:25},
+            margin: {top:40, right:10, bottom:20, left:40},
             xlabel: "xlabel",
             ylabel: "ylabel",
             title: "title",
