@@ -46,7 +46,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
             //データの追加
               if(num == 1){
               data.sort((a, b) => a.population - b.population)
-              }else if (num == 3){
+              }else if (num == 2){
                 data.sort((a, b) => a.under15age - b.under15age)
               }
               barchart.update();
@@ -60,7 +60,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
             //データの追加
               if(num == 1){
               data.sort((a, b) => b.population - a.population)
-              }else if (num == 3){
+              }else if (num == 2){
               data.sort((a, b) => b.under15age - a.under15age)
               }
               barchart.update();
