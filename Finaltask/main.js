@@ -1,4 +1,4 @@
-d3.csv("https://228x006x.github.io/InfoVis2022/FinalTask/FEI.csv")
+d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
     .then( data => {
         data.forEach( (d,i) => {
           d.population = +d.population, 
