@@ -48,6 +48,10 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
               data.sort((a, b) => a.population - b.population)
               }else if (num == 2){
                 data.sort((a, b) => a.under15age - b.under15age)
+              }else if (num == 3){
+                data.sort((a, b) => a.age15to64 - b.age15to64)
+              }else if (num == 4){
+                data.sort((a, b) => a.over65age - b.over65age)
               }
               barchart.update();
         });
@@ -62,6 +66,10 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
               data.sort((a, b) => b.population - a.population)
               }else if (num == 2){
               data.sort((a, b) => b.under15age - a.under15age)
+              }else if (num == 3){
+                data.sort((a, b) => a.age15to64 - b.age15to64)
+              }else if (num == 4){
+                data.sort((a, b) => a.over65age - b.over65age)
               }
               barchart.update();
         });
