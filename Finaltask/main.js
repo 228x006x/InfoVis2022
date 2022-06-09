@@ -6,7 +6,6 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
           d.age15to64 = +d.age15to64,
           d.over65age = +d.over65age,
           
-
           d.index = i;  });
 
         const barchart = new BarChart({ 
