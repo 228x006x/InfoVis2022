@@ -3,6 +3,8 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
         data.forEach( (d,i) => {
           d.population = +d.population, 
           d.under15age =+d.under15age,
+          d.age15to64 = +d.age15to64,
+          d.over65age = +d.over65age,
           
 
           d.index = i;  });
