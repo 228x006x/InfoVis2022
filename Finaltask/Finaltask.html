@@ -28,7 +28,7 @@
 	</style>
     </head>
     <body>
-	<h2>Final Task:都道府県ごとの年齢別人口比較</h2>
+	<h2>Final Task: 都道府県ごとの年齢別人口比較</h2>
 	
 	<p>
 		各データの都道府県順位
@@ -37,11 +37,11 @@
 		<option value= "人口" >人口</option>
 		<option value="15歳以下人口">15歳以下人口</option>
         <option value="15~64歳人口">15~64歳人口</option>
-        <option value="64歳以上人口">65歳以上人口</option>
+        <option value="65歳以上人口">65歳以上人口</option>
 		
 	</select>
 	<button type="button" id="Decision1">決定</button>
-		棒グラフのデータ： <span id="span1"></span>
+		棒グラフのデータ: <span id="span1"></span>
 		<button type="button" id="original">Original</button>
 		<button type="button" id="reverse">Reverse</button>
 		<button type="button" id="ascend">Ascend</button>
@@ -54,26 +54,25 @@
 		<option value= "人口" >人口</option>
 		<option value="15歳以下人口">15歳以下人口</option>
         <option value="15~64歳人口">15~64歳人口</option>
-        <option value="64歳以上人口">64歳以上人口</option>
+        <option value="65歳以上人口">64歳以上人口</option>
 		
 	</select>
 	<button type="button" id="Decision2">決定</button>
-		横軸：<span id="span2"></span>
+		横軸:<span id="span2"></span>
 	<select name="VerticalValue" id="VerticalValue">
 		<option disabled selected>縦軸の値を選択</option>
 		<option value= "人口" >人口</option>
 		<option value="15歳未満人口">15歳以下人口</option>
         <option value="15~64歳人口">15~64歳人口</option>
-        <option value="64歳以上人口">65歳以上人口</option>
+        <option value="65歳以上人口">65歳以上人口</option>
 		
 	</select>
 	<button type="button" id="Decision3">決定</button>
-		縦軸： <span id="span3"></span></p>
+		縦軸: <span id="span3"></span></p>
 	<p>
 		選択時のグラフの色
-		<select name="SelectColor" id="SelectColor">
-		<option value="red"selected>赤</option>
-		<option value="green">緑</option>
+		<option value="red">赤</option>
+		
 	</select>	
 	<button type="button" id="Decision4">散布図に反映</button>
 	<button type="button" id="Decision5">リセット</button>
@@ -84,7 +83,7 @@
 	    <div><svg id="drawing_region_barchart" ></svg></div>
 		<div><svg id="drawing_region_scatterplot"></svg></div>
 	</div>
-		データの出典：
+		出典:政府統計の総合窓口 e-Stat（https://www.e-stat.go.jp/）
 	<script src="https://d3js.org/d3.v6.min.js"></script>
 	<script src="ScatterPlot.js"></script>
 	<script src="BarChart.js"></script>
