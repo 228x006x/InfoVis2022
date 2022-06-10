@@ -28,7 +28,7 @@
 	</style>
     </head>
     <body>
-	<h2>Finaltask(228x006x):都道府県ごとの年齢別人口比較</h2>
+	<h2>Final Task:都道府県ごとの年齢別人口比較</h2>
 	
 	<p>
 		各データの都道府県順位
@@ -41,7 +41,7 @@
 		
 	</select>
 	<button type="button" id="Decision1">決定</button>
-		棒グラフの値： <span id="span1"></span>
+		棒グラフのデータ： <span id="span1"></span>
 		<button type="button" id="original">Original</button>
 		<button type="button" id="reverse">Reverse</button>
 		<button type="button" id="ascend">Ascend</button>
@@ -58,9 +58,9 @@
 		
 	</select>
 	<button type="button" id="Decision2">決定</button>
-		横軸の値：<span id="span2"></span>
+		横軸：<span id="span2"></span>
 	<select name="VerticalValue" id="VerticalValue">
-		<option disabled selected>縦軸の値を選択してください</option>
+		<option disabled selected>縦軸の値を選択</option>
 		<option value= "人口" >人口</option>
 		<option value="15歳未満人口">15歳以下人口</option>
         <option value="15~64歳人口">15~64歳人口</option>
@@ -68,17 +68,16 @@
 		
 	</select>
 	<button type="button" id="Decision3">決定</button>
-		縦軸の値： <span id="span3"></span></p>
+		縦軸： <span id="span3"></span></p>
 	<p>
-		都道府県を選択したときの色
+		選択時のグラフの色
 		<select name="SelectColor" id="SelectColor">
-		<option value= "red"selected>赤</option>
-		<option value="blue">青</option>
+		<option value="red"selected>赤</option>
 		<option value="green">緑</option>
 	</select>	
-	<button type="button" id="Decision4">都道県選択：散布図に反映</button>
+	<button type="button" id="Decision4">散布図に反映</button>
 	<button type="button" id="Decision5">リセット</button>
-	<label for="radius-slider">Radius: <span id="radius-value">10</span></label>
+	<label for="radius-slider">Radius: <span id="radius-value">8</span></label>
     <input type="range" min="1" value="10" max="30" id="radius-slider">
 	<div id="tooltip"></div>
 	<div class="container">

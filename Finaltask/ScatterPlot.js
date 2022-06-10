@@ -26,27 +26,27 @@ class ScatterPlot {
         self.yscale = d3.scaleLinear()
             .range( [self.inner_height, 0] );
         self.xaxis = d3.axisBottom( self.xscale )
-            .ticks(5)
-            .tickSize(5)
-            .tickPadding(5);
+            .ticks(6)
+            .tickSize(6)
+            .tickPadding(6);
         self.yaxis = d3.axisLeft( self.yscale )
-            .ticks(5)
-            .tickSize(5)
-            .tickPadding(5);
+            .ticks(6)
+            .tickSize(6)
+            .tickPadding(6);
         self.xaxis_group = self.chart.append('g')
             .attr('transform', `translate(0, ${self.inner_height})`);
         self.yaxis_group = self.chart.append('g')
              .attr('transform', `translate( ${self.inner_width}),0`);
-        const xlabel_space = 40;
+        const xlabel_space = 35;
         self.svg.append('text')
-            .style('font-size', '12px')
+            .style('font-size', '10px')
             .attr('x', self.config.margin.left + self.inner_width / 2)
             .attr('y', self.inner_height + self.config.margin.top + xlabel_space)
             .attr('text-anchor', 'middle')
             .text(  );
-        const ylabel_space = 45;
+        const ylabel_space = 40;
         self.svg.append('text')
-            .style('font-size', '12px')
+            .style('font-size', '10px')
             .attr('transform', `rotate(-90)`)
             .attr('y', self.config.margin.left - ylabel_space -30 )
             .attr('x', -self.config.margin.top - self.inner_height / 2)

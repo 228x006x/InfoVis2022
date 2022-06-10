@@ -12,7 +12,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
             parent: '#drawing_region_barchart',
             width: 600,
             height: 600,
-            margin: {top:10, right:50, bottom:50, left:100},
+            margin: {top:10, right:50, bottom:50, left:80},
             xlabel: 'xlabel',
             ylabel: 'ylabel',
             title: "title",
@@ -22,7 +22,7 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
             parent: '#drawing_region_scatterplot',
             width: 600,
             height: 600,
-            margin: {top:10, right:10, bottom:50, left:100},
+            margin: {top:10, right:10, bottom:50, left:80},
             xlabel: 'Sepal length [cm]',
             ylabel: 'Sepal width [cm]',
             }, data );
