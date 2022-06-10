@@ -71,13 +71,14 @@
 		縦軸: <span id="span3"></span></p>
 	<p>
 		選択時のグラフの色
-		<option value="red">赤</option>
-		
+		<select name="SelectColor" id="SelectColor">
+            <option value= "red"selected>赤</option>
+            <option value="green">緑</option>
 	</select>	
 	<button type="button" id="Decision4">散布図に反映</button>
 	<button type="button" id="Decision5">リセット</button>
 	<label for="radius-slider">Radius: <span id="radius-value">8</span></label>
-    <input type="range" min="1" value="10" max="30" id="radius-slider">
+    <input type="range" min="1" value="10" max="15" id="radius-slider">
 	<div id="tooltip"></div>
 	<div class="container">
 	    <div><svg id="drawing_region_barchart" ></svg></div>
