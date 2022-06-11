@@ -1,11 +1,14 @@
 d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
     .then( data => {
         data.forEach( (d,i) => {
-          d.population = +d.population, 
-          d.under15age =+d.under15age,
-          d.age15to64 = +d.age15to64,
-          d.over65age = +d.over65age,
-          
+          d.population1998 =+d.population1998, 
+          d.under15age1998 =+d.under15age1998,
+          d.age15to641998 =+d.age15to641998,
+          d.over65age1998 =+d.over65age1998,
+          d.population2019 =+d.population2019, 
+          d.under15age2019 =+d.under15age2019,
+          d.age15to642019 =+d.age15to642019,
+          d.over65age2019 =+d.over65age2019,
           d.index = i;  });
 
         const barchart = new BarChart({ 
@@ -46,13 +49,21 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
             const str = BarData.options[num].value;
             //データの追加
               if(num == 1){
-              data.sort((a, b) => a.population - b.population)
+              data.sort((a, b) => a.population1998 - b.population1998)
               }else if (num == 2){
-                data.sort((a, b) => a.under15age - b.under15age)
+                data.sort((a, b) => a.under15age1998 - b.under15age1998)
               }else if (num == 3){
-                data.sort((a, b) => a.age15to64 - b.age15to64)
+                data.sort((a, b) => a.age15to641998 - b.age15to641998)
               }else if (num == 4){
-                data.sort((a, b) => a.over65age - b.over65age)
+                data.sort((a, b) => a.over65age1998 - b.over65age1998)
+              }else if (num == 5){
+                data.sort((a, b) => a.population2019 - b.population2019)
+              }else if (num == 6){
+                data.sort((a, b) => a.under15age2019 - b.under15age2019)
+              }else if (num == 7){
+                data.sort((a, b) => a.age15to642019 - b.age15to642019)
+              }else if (num == 8){
+                data.sort((a, b) => a.over65age2019 - b.over65age2019)
               }
               barchart.update();
         });
@@ -64,13 +75,21 @@ d3.csv("https://228x006x.github.io/InfoVis2022/Finaltask/FEI.csv")
             const str = BarData.options[num].value;
             //データの追加
               if(num == 1){
-              data.sort((a, b) => b.population - a.population)
+              data.sort((a, b) => b.population1998 - a.population1998)
               }else if (num == 2){
-              data.sort((a, b) => b.under15age - a.under15age)
+              data.sort((a, b) => b.under15age1998 - a.under15age1998)
               }else if (num == 3){
-                data.sort((a, b) => b.age15to64 - a.age15to64)
+                data.sort((a, b) => b.age15to641998 - a.age15to641998)
               }else if (num == 4){
-                data.sort((a, b) => b.over65age - a.over65age)
+                data.sort((a, b) => b.over65age1998 - a.over65age1998)
+              }else if (num == 5){
+                data.sort((a, b) => b.population2019 - a.population2019)
+              }else if (num == 6){
+                data.sort((a, b) => b.under15age2019 - a.under15age2019)
+              }else if (num == 7){
+                data.sort((a, b) => b.age15to642019 - a.age15to642019)
+              }else if (num == 8){
+                data.sort((a, b) => b.over65age2019 - a.over65age2019)
               }
               barchart.update();
         });

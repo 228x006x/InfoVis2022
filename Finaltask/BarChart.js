@@ -62,15 +62,23 @@ class BarChart{
         const str = BarData.options[num].value;
         //データの追加
         if (num == 1){
-            self.bvalue = d => d.population	;
+            self.bvalue = d => d.population1998	;
         }else if(num == 2){
-            self.bvalue = d => d.under15age	;
+            self.bvalue = d => d.under15age1998	;
         }else if(num == 3){
-            self.bvalue = d => d.age15to64	;
+            self.bvalue = d => d.age15to641998	;
         }else if(num == 4){
-            self.bvalue = d => d.over65age	;
+            self.bvalue = d => d.over65age1998	;
+        }else if(num == 5){
+            self.bvalue = d => d.population2019	;
+        }else if(num == 6){
+            self.bvalue = d => d.under15age2019	;
+        }else if(num == 7){
+            self.bvalue = d => d.age15to642019	;
+        }else if(num == 8){
+            self.bvalue = d => d.over65age2019	;
         }else{
-            self.bvalue = d => d.population	;
+            self.bvalue = d => d.population1998	;
         }
     
     

@@ -62,15 +62,23 @@ class ScatterPlot {
         const Horizontalstr = HorizontalData.options[Horizontalnum].value;
         //データの追加
         if (Horizontalnum == 1){
-            self.xvalue = d => d.population	;
+            self.xvalue = d => d.population1998	;
         }else if(Horizontalnum == 2){
-            self.xvalue = d => d.under15age	;
+            self.xvalue = d => d.under15age1998	;
         }else if(Horizontalnum == 3){
-            self.xvalue = d => d.age15to64	;
+            self.xvalue = d => d.age15to641998	;
         }else if(Horizontalnum == 4){
-            self.xvalue = d => d.over65age	;
+            self.xvalue = d => d.over65age1998	;
+        }else if(Horizontalnum == 5){
+            self.xvalue = d => d.population2019	;
+        }else if(Horizontalnum == 6){
+            self.xvalue = d => d.under15age2019	;
+        }else if(Horizontalnum == 7){
+            self.xvalue = d => d.age15to642019	;
+        }else if(Horizontalnum == 8){
+            self.xvalue = d => d.over65age2019	;
         }else{
-            self.xvalue = d => d.population	;
+            self.xvalue = d => d.population1998	;
         }
 
         const VerticalData = document.getElementById('VerticalValue');
@@ -78,15 +86,23 @@ class ScatterPlot {
         const Verticalstr = VerticalData.options[Horizontalnum].value;
         //データの追加
         if (Verticalnum == 1){
-            self.yvalue = d => d.population	;
+            self.yvalue = d => d.population1998	;
         }else if(Verticalnum == 2){
-            self.yvalue = d => d.under15age	;
+            self.yvalue = d => d.under15age1998	;
         }else if(Verticalnum == 3){
-            self.yvalue = d => d.age15to64	;
+            self.yvalue = d => d.age15to641998	;
         }else if(Verticalnum == 4){
-            self.yvalue = d => d.over65age	;
+            self.yvalue = d => d.over65age1998	;
+        }else if(Verticalnum == 5){
+            self.yvalue = d => d.population2019	;
+        }else if(Verticalnum == 6){
+            self.yvalue = d => d.under15age2019	;
+        }else if(Verticalnum == 7){
+            self.yvalue = d => d.age15to642019	;
+        }else if(Verticalnum == 8){
+            self.yvalue = d => d.over65age2019	;
         }else{
-        self.yvalue = d => d.population	;
+        self.yvalue = d => d.population1998	;
         }
         
         const xmin = d3.min( self.data, self.xvalue );
